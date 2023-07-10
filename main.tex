@@ -1,5 +1,32 @@
 \title{Alessandro_Magnasco_Tech}
 \documentclass[]{deedy-resume-openfont}
+
+% imports 
+\usepackage{graphicx} % embedded graphics
+\usepackage{wrapfig} % wrap text around images
+\usepackage{hyperref} % hyperlinks
+\usepackage{fontawesome} % icons
+\usepackage[many]{tcolorbox} % build badge
+\usepackage{shadowtext} % text shadowing
+
+% modified from Jinwen 2022
+% https://tex.stackexchange.com/questions/635287/how-to-make-status-badge-in-tcolorbox
+\NewDocumentCommand \badge { m m m }
+  {
+    \shadowoffsetx{0pt}
+    \shadowoffsety{0.6pt}
+    \tcbsidebyside
+      [
+        enhanced, sidebyside, sidebyside adapt=both,
+        bicolor, colback=black, colbacklower=green!70!black,
+        frame hidden,
+        left=2pt, right=2pt, top=0pt, bottom=0pt, boxsep=1.5pt,
+        sidebyside gap=0em,
+      ]
+    {\shadowcolor{black!80}\sffamily\textcolor{gray}{#1}\!\textcolor{white}{\shadowtext{#2}}\hspace{-.5em}\phantom{q}}
+    {\shadowcolor{black!60}\sffamily\hspace{-1.5em}\phantom{#1}\textcolor{white}{\shadowtext{#3}}\hspace{-1em}\phantom{q}}
+  }
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% READ FIRST %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -14,14 +41,20 @@
     %\vspace{-4pt}
     %\rule[5pt]{199pt}{1pt} \\ % 265 pt
     \urlstyle{same}\url{} 
-    (Ale) :: he/him :: amagnasco at gradcenter.cuny.edu \\
+    (Ale) :: he/him :: {amagnasco at gradcenter.cuny.edu} \\
     {\large << Experienced data scientist for critical infrastructure >>} \\
     %\rule[5pt]{400pt}{1pt} \\ % 445 pt
     \small{
-    portfolio >> {tinyurl.com/amagnasco} :: github >> {amagnasco/cv} :: linkedin >> {/in/amagnasco} :: observable >> {@amagnasco}
+        portfolio >> \href{https://tinyurl.com/amagnasco}{tinyurl.com/amagnasco} :: 
+        \faicon{github} >> \href{https://github.com/amagnasco/cv}{amagnasco/cv} :: 
+        \faicon{linkedin} >> \href{https://linkedin.com/in/amagnasco}{/in/amagnasco} :: 
+        observablehq >> \href{https://observablehq.com/@amagnasco}{@amagnasco}
     }
 }
-\vspace{5pt} 
+% include build badge
+%\raggedleft{\href{https://dl.circleci.com/status-badge/redirect/gh/amagnasco/cv/tree/main}{\XeLaTeX \space}}\includegraphics{main.svg}
+\vspace{-2pt} 
+\raggedleft{\badge{ \faicon{github} }{ \XeLaTeX }{ passing }}
 \vspace{\topsep}
 
 %\section{Interviewing for data scientist role}
@@ -46,7 +79,7 @@
     	\item Designed and carried out to completion several mission-critical projects in different fields.
         \item Works closely with teams in the field to maximize efficiency.
         \item Managed company-wide purchasing for technology products and services.
-        \item Experienced working with and managing 10s of Executive Boards, 100s of project teams, and 1000s general public.
+        \item Experienced working with 10s of Executive Boards, 100s of project teams, and 1000s general public.
         \item Reduced overhead costs when reconciling and auditing budgets of over US\$5,000,000.
 	\end{itemize}
 
