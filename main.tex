@@ -9,6 +9,7 @@
 \usepackage[many]{tcolorbox} % build badge
 \usepackage{shadowtext} % text shadowing
 
+% custom CI badge, since the real one is too low-res for a PDF
 % modified from Jinwen 2022
 % https://tex.stackexchange.com/questions/635287/how-to-make-status-badge-in-tcolorbox
 \NewDocumentCommand \badge { m m m }
@@ -46,7 +47,7 @@
         \faicon{github} >> \href{https://github.com/amagnasco/cv}{amagnasco/cv} :: 
         \faicon{linkedin} >> \href{https://linkedin.com/in/amagnasco}{/in/amagnasco} :: 
         observablehq >> \href{https://observablehq.com/@amagnasco}{@amagnasco}
-        \hspace{1.1cm} % added b/c for some reason not centering properly
+        \hspace{1.1cm} % added b/c for some reason not centering properly, likely icons
     }
 }
 % include build badge
@@ -105,7 +106,7 @@
         \\ RESULT: Significantly scaled up Development operations, increasing productivity and revenue.
     \end{itemize}
 
-% the following section is not compiled in the PDF
+% the following section is not compiled in the PDF, to keep it one page
 \iffalse
 
 \section{Education}
