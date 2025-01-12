@@ -2,8 +2,10 @@
 \documentclass[]{deedy-resume-openfont}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% READ FIRST %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Hello! I'm Ale, and this is my custom CV. I scripted it in LaTeX, a typesetting markup language.
-% Thank you for visiting, and please don't hesitate to ask regarding any questions you may have.
+% Hello! I'm Ale, and this is my custom CV. 
+% I scripted it in LaTeX, a typesetting markup language.
+% Thank you for visiting, and please don't hesitate to ask 
+% regarding any questions you may have.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% ~~~~~~~~~~ %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % imports 
@@ -14,7 +16,7 @@
 \usepackage[many]{tcolorbox} % build badge
 \usepackage{shadowtext} % text shadowing
 
-\iffalse
+%\iffalse
 % custom CI badge, since the real one is too low-res for a PDF
 % modified from Jinwen 2022
 % https://tex.stackexchange.com/questions/635287/how-to-make-status-badge-in-tcolorbox
@@ -33,7 +35,7 @@
     {\shadowcolor{black!80}\sffamily\textcolor{gray}{#1}\!\textcolor{white}{\shadowtext{#2}}\hspace{-.5em}\phantom{q}}
     {\shadowcolor{black!60}\sffamily\hspace{-1.5em}\phantom{#1}\textcolor{white}{\shadowtext{#3}}\hspace{-1em}\phantom{q}}
   }
-\fi
+%\fi
 
 \begin{document}
 
@@ -56,29 +58,32 @@
 
 \vspace{10pt}
 
-\iffalse
+% breaks compile timeout in Overleaf
+%\iffalse
 % include build badge
-\vspace{-2pt} 
+\vspace{-24pt} 
 \raggedleft{\href{https://dl.circleci.com/status-badge/redirect/gh/amagnasco/cv/tree/main}{\badge{ \faicon{github} }{ \XeLaTeX }{ passing }}}
 \vspace{-10pt}
-\fi
+%\fi
 
 %\section{Interviewing for data scientist role}
 \subsection{6 Years of experience managing critical data systems}
 \vspace{\topsep}
     \begin{itemize}
-        \item Master of Science in Data Analysis and Visualization, CUNY Graduate Center. \\
+        \item Full-stack IC engineer for multiple commercial websites \\
+        >> Agile, test-driven development in Typescript, Express, Jest, Vite, React, Cypress. \\
+        >> Focus on completely customized websites for project management, educational systems.\\
+        >> Carried out the full-stack design and rollout of several new servers, databases, CRM systems, and websites. \\
+        \item Master of Science in Data Analysis and Visualization, CUNY Graduate Center (thesis pending) \\
         >> Focus on non-standard statistical distributions, machine learning in Python and R \\
         >> Custom visualizations in D3.js, matplot, seaborn, ggplot, \TeX, Leaflet.js \\
         >> Doctoral coursework in demographic calculus and geographic theory
-        \item Carried out the full-stack design and rollout of several new servers, databases, CRM systems, and websites.
-        \\>> Frameworks: React (JS), Vue (JS), Flask (Python), Shiny (R), usually though Docker.
         \item 7 years of experience managing DBs, including implementation and migration from other DBs \\ \textit{>> PostgreSQL, Salesforce, Airtable, various CRMs, various SQL-based}
         \item 4 years of experience managing ETL pipelines in Python and R, and machine learning (tidyverse, scikit-learn, pandas)
         \item 5 years of experience managing GIS pipelines, both static and dynamic, web and print
-        \item FEMA-certified emergency manager for infrastructure; 3 years as supervisor for all phases of EM.
-        %\item Google-certified in Advanced Data Analytics;  Social Justice Leader @ Transform Finance. % will complete by end of July
-        \item Linux since 1998: RHEL, Ubuntu, Arch, Raspbian/Debian, Kali, Tails, Xen/Qubes; low-latency kernels; custom hw interfaces.
+        %\item FEMA-certified emergency manager for infrastructure; 3 years as supervisor for all phases of EM.
+        %\item Social Justice Leader @ Transform Finance.
+        %\item Linux since 1998: RHEL, Ubuntu, Arch, Raspbian/Debian, Kali, Tails, Xen/Qubes; low-latency kernels; custom hw interfaces.
     \end{itemize}
 \subsection{10 years of experience running core projects}
 \vspace{\topsep}
@@ -97,7 +102,7 @@
     \begin{itemize}
         \item On projects ranging up to years, with the American Red Cross, Rockefeller University, State University of New York, Cornell University, Columbia University, City University of New York, Violence Intervention Program, Habitat for Humanity, Fundacion Irradia, Interfaith Center for Sustainable Development, Mothers Helping Mothers, NY Tech Guild, Increasing Community Unity, Creating Healthy Places, Flatbush Tenant Coalition, Impacct, Chemung County Poverty Reduction Coalition, NYC Housing Data Coalition, Stabilizing NYC Coalition, Right to Counsel Coalition, Anti Eviction Mapping Project, Housing Finance Coalition, Association for Neighborhood and Community Development Banking/CRA Coalition...
         \\RESULT: Multiple repeat clients, three international expansions, multiple successful launches
-        \item Sole or lead programmer for three dozen data systems, 7 server groups/webstacks, and 8 CRM databases.
+        \item Sole or lead programmer for three dozen data systems, 9 server groups/webstacks, and 8 CRM databases.
         \\>> Six years managing protected healthcare data (patient info) \& finance data (trading and ledgers)
         \\>> Six years managing environmental data (autecological and synecological) 
         \\ RESULT: Authored plans reducing department IT expenses by >70\% and boosting client retention
