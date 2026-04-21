@@ -19,7 +19,8 @@
 \usepackage[many]{tcolorbox} % build badge
 \usepackage{shadowtext} % text shadowing
 
-%\iffalse
+\renewcommand{\baselinestretch}{1.0} % line spacing
+
 % custom CI badge, since the real one is too low-res for a PDF
 % modified from Jinwen 2022
 % https://tex.stackexchange.com/questions/635287/how-to-make-status-badge-in-tcolorbox
@@ -38,47 +39,46 @@
     {\shadowcolor{black!80}\sffamily\textcolor{gray}{#1}\!\textcolor{white}{\shadowtext{#2}}\hspace{-.5em}\phantom{q}}
     {\shadowcolor{black!60}\sffamily\hspace{-1.5em}\phantom{#1}\textcolor{white}{\shadowtext{#3}}\hspace{-1em}\phantom{q}}
   }
-%\fi
 
 \begin{document}
 
 %\lastupdated
 
-% generate title section
-\namesection{Alessandro G.}{Magnasco}{
-    \urlstyle{same}\url{} 
-    (Ale) :: he/him :: {amagnasco@gradcenter.cuny.edu} \\
-    {\large << Experienced data scientist for critical infrastructure >>} \\
-    {\large << Senior analyst, Semi-senior full stack engineer (JS, TS, Python, R) >>} \\
-    \small{
-        portfolio >> \href{https://tinyurl.com/amagnasco}{tinyurl.com/amagnasco} :: 
-        \faicon{github} >> \href{https://github.com/amagnasco/cv}{amagnasco/cv} :: 
-        \faicon{linkedin} >> \href{https://linkedin.com/in/amagnasco}{/in/amagnasco} :: 
-        +1 347-4762805 :: +57 318-7490490
-        %observablehq >> \href{https://observablehq.com/@amagnasco}{@amagnasco}
-        %\hspace{1.1cm} % added b/c for some reason not centering properly, likely icons
-    }
+% title section
+\namesection{}{}{
+    \raggedright{}
+    \begin{minipage}[b]{.7\textwidth}
+        {\Huge Alessandro G. Magnasco} {\small he/him}\\
+        {\large \\
+        Experienced data scientist for critical infrastructure \\
+        Senior analyst, Semi-senior full stack engineer (JS, TS, Python, R)}
+
+        \vspace{\topsep}
+        {\normalsize \\
+            portfolio >> \href{https://tinyurl.com/amagnasco}{tinyurl.com/amagnasco} :: 
+            \faicon{github} >> \href{https://github.com/amagnasco/cv}{amagnasco/cv} :: 
+            \faicon{linkedin} >> \href{https://linkedin.com/in/amagnasco}{/in/amagnasco} \\
+            %observablehq >> \href{https://observablehq.com/@amagnasco}{@amagnasco}
+            %\hspace{1.1cm} % added b/c for some reason not centering properly, likely icons
+            {alessandro.magnasco95@gc.cuny.edu} :: +1 347-4762805 :: +57 318-7490490
+        }        
+    \end{minipage}
+    \begin{minipage}[b]{.29\textwidth}
+        \hspace{2cm}
+        %\vspace{-0.8cm}
+        \includegraphics[width=3.5cm]{ale_profile_pic.png}
+    \end{minipage}
 }
 
 \vspace{10pt}
 
-% breaks compile timeout in Overleaf
-%\iffalse
+% sometimes breaks compile timeout in Overleaf
 % include build badge
 \vspace{-24pt} 
 \raggedleft{\href{https://dl.circleci.com/status-badge/redirect/gh/amagnasco/cv/tree/main}{\badge{ \faicon{github} }{ \XeLaTeX }{ passing }}}
 \vspace{-10pt}
-%\fi
 
 % script for year calculations: \number\numexpr\year-2012\relax\space
-
-%\subsection{Experience with food tech}
-%    \vspace{\topsep}
-%    \begin{itemize}
-%        \item 
-%    \end{itemize}
-
-%\section{Interviewing for data scientist role}
 
 \subsection{\number\numexpr\year-2012\relax\space years of experience managing critical data systems}
 \vspace{\topsep}
@@ -153,8 +153,11 @@
 
 \pagebreak
 
-\section{Selected projects}
+\section{Selected experience}
 \begin{minipage}[t]{1\textwidth}
+
+    \linespread{1.3}
+    
     \runsubsection{Chordline Health}
         \descript{>> 2025-2026 Data engineer}
     \runsubsection{Google Gemini Labs}
@@ -210,7 +213,7 @@
     \runsubsection{American Red Cross}\\
         \descript{>> 2017-2022 Supervisor, geostatistical analysis, casework}
         \descript{>> 2017-2018 AmeriCorps}
-        \descript{>> 2016 Finance team (v)}
+        \descript{>> 2016-2017 Finance team (v)}
     \runsubsection{Whole Foods}
         \descript{>> 2016 Specialty products team}
     \runsubsection{Habitat for Humanity}
@@ -235,7 +238,7 @@
         \descript{>> 2012-2015 Academic Program Assessment Committee}
 \end{minipage}
 
-% the following section is not compiled in the PDF, to keep it one page
+% the following section is not compiled in the PDF, to keep it shorter
 \iffalse
 
 \section{SKILLS \& METRICS}
