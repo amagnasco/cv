@@ -2,7 +2,7 @@
 
 Hi! My name is Ale and this CV represents a portion of my tech experience since the late 20th century.
 
-The compiled PDF is [(Alessandro_Magnasco_Tech.pdf)](Alessandro_Magnasco_Tech.pdf). Download it to see in full resolution.
+The compiled PDF in [English](Alessandro_Magnasco_EN.pdf) and [Spanish](Alessandro_Magnasco_ES.pdf). Download it to see in full resolution.
 
 GitHub might give you some trouble downloading, in which case get it from [Overleaf](https://www.overleaf.com/read/ftmmqcdnrqcn), where you can see the PDF and code side-by-side.
 Give it a few seconds to compile, then click download to the right of the green "recompile" button.
