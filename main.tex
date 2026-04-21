@@ -1,16 +1,17 @@
 \title{Alessandro_Magnasco_Tech}
-\documentclass[  hmargin=1.25cm,vmargin=0.7cm,a4paper
-]{deedy-resume-openfont}
+\documentclass[hmargin=1.25cm,vmargin=0.7cm,a4paper]{./template/deedy-resume-openfont}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% READ FIRST %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Hello! I'm Ale, and this is my custom CV. 
 % I scripted it in LaTeX, a typesetting markup language.
-% Thank you for visiting, and please don't hesitate to ask 
-% regarding any questions you may have.
+% Thank you for visiting, and please don't hesitate to reach out!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% ~~~~~~~~~~ %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% SET LANGUAGE HERE (options en, es)
+\newcommand{\locale}{en}
+
 % imports 
-%\usepackage[a4paper]{geometry}
+\usepackage{import}
 \usepackage{xcolor}
 \usepackage{graphicx} % embedded graphics
 \usepackage{wrapfig} % wrap text around images
@@ -18,7 +19,6 @@
 \usepackage{fontawesome} % icons
 \usepackage[many]{tcolorbox} % build badge
 \usepackage{shadowtext} % text shadowing
-
 \renewcommand{\baselinestretch}{1.0} % line spacing
 
 % custom CI badge, since the real one is too low-res for a PDF
@@ -43,13 +43,12 @@
 
 \begin{document}
 
-\input{header}
-\input{summary}
-\include{experience}
+\input{\locale/header}
+\input{\locale/summary}
+\include{\locale/experience}
 
-% the following section is not compiled in the PDF, to keep it shorter
-\iffalse
-    \include{skills}
+\iffalse % the following section is not compiled in the PDF, to keep it shorter
+    \include{\locale/skills}
 \fi
 
 \end{document}
