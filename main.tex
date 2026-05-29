@@ -8,7 +8,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% ~~~~~~~~~~ %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % SET LANGUAGE HERE (options en, es)
-\newcommand{\locale}{en}
+\newcommand{\locales}{es}
 
 % imports 
 \usepackage{import}
@@ -16,39 +16,17 @@
 \usepackage{graphicx} % embedded graphics
 \usepackage{wrapfig} % wrap text around images
 \usepackage{hyperref} % hyperlinks
-\usepackage{fontawesome} % icons
-\usepackage[many]{tcolorbox} % build badge
-\usepackage{shadowtext} % text shadowing
-\renewcommand{\baselinestretch}{1.0} % line spacing
 
-% custom CI badge, since the real one is too low-res for a PDF
-% modified from Jinwen 2022
-% https://tex.stackexchange.com/questions/635287/how-to-make-status-badge-in-tcolorbox
-\NewDocumentCommand \badge { m m m }
-  {
-    \shadowoffsetx{0pt}
-    \shadowoffsety{0.6pt}
-    \tcbsidebyside
-      [
-        enhanced, sidebyside, sidebyside adapt=both,
-        bicolor, colback=black, colbacklower=green!70!black,
-        frame hidden,
-        left=2pt, right=2pt, top=0pt, bottom=0pt, boxsep=1.5pt,
-        sidebyside gap=0em,
-      ]
-    {\shadowcolor{black!80}\sffamily\textcolor{gray}{#1}\!\textcolor{white}{\shadowtext{#2}}\hspace{-.5em}\phantom{q}}
-    {\shadowcolor{black!60}\sffamily\hspace{-1.5em}\phantom{#1}\textcolor{white}{\shadowtext{#3}}\hspace{-1em}\phantom{q}}
-  }
+\input{ci_badge}
+\input{exp_table}
+
 % script for year calculations: \number\numexpr\year-2012\relax\space
+\renewcommand{\baselinestretch}{1.0} % line spacing
 
 \begin{document}
 
-\input{\locale/header}
-\input{\locale/summary}
-\include{\locale/experience}
-
-\iffalse % the following section is not compiled in the PDF, to keep it shorter
-    \include{\locale/skills}
-\fi
+\input{\locales/header}
+\input{\locales/summary}
+\input{\locales/experience}
 
 \end{document}
